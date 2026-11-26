@@ -56,14 +56,23 @@ button, a { -webkit-tap-highlight-color: transparent; }
   animation-play-state: paused;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .kyna-marquee {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .kyna-marquee::-webkit-scrollbar {
+    display: none;
+  }
+
   .kyna-marquee-track {
     animation: none;
   }
 
-  .kyna-marquee {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+  .kyna-marquee-track[aria-hidden="true"] {
+    display: none;
   }
 
   .kyna-marquee-track > * {
