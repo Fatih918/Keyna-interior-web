@@ -22,12 +22,7 @@ const services = [
   { number: "03", title: "Renovasi", description: "Perbarui fungsi dan suasana ruang tanpa kehilangan hal-hal yang sudah kamu sukai.", detail: "Renovasi · Upgrade ruang" },
 ];
 
-const projects = [
-  { name: "Ruang Keluarga", type: "Residential · Interior", className: "project-one", size: "large" },
-  { name: "Hunian Modern", type: "Residential · Design", className: "project-two", size: "small" },
-  { name: "Detail Ruang", type: "Interior · Styling", className: "project-three", size: "small" },
-  { name: "Area Hunian", type: "Residential · Renovation", className: "project-four", size: "large" },
-];
+
 
 const testimonials = [
   { quote: "Konsultasi renovasi dengan budget yang transparan. RAB dijelaskan dengan terbuka, pengerjaan sesuai deadline, dan timnya komunikatif.", author: "Berda", context: "Ulasan pelanggan · 6 bulan lalu" },
