@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
-import "./globals.css";\nimport VerticalTilesPreloader from "@/components/animata/preloader/vertical-tiles";
+import "./globals.css";
+import VerticalTilesPreloader from "@/components/animata/preloader/vertical-tiles";
 
 const dmSans = DM_Sans({
   variable: "--font-sans",
