@@ -1,11 +1,13 @@
 import SiblingFocusNav, { SiblingFocusNavLink } from "@/components/animata/container/sibling-focus-nav";
+import MobileNav from "@/components/mobile-nav";
+import Marquee from "@/components/animata/container/marquee";
+import ProductFeatures from "@/components/animata/hero/product-features";
 import {
   ArrowDownRight,
   ArrowUpRight,
   CheckCircle2,
   Clock3,
   MapPin,
-  Menu,
   MessageCircle,
   Phone,
   Star,
@@ -45,7 +47,7 @@ function SectionHeading({ label, title, description }: { label: string; title: s
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="min-w-0">
       <div className="bg-[#272d25] px-5 py-2.5 text-center text-[10px] tracking-[.12em] text-white/80 sm:text-xs">
         WUJUDKAN RUANG IMPIANMU — <span className="font-semibold text-[#d9d8c8]">GRATIS SURVEY & KONSULTASI AWAL</span>
       </div>
@@ -66,7 +68,7 @@ export default function Home() {
             <a href={whatsapp("Halo Kyna Interior, saya ingin konsultasi proyek.")} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-lg border border-white/25 bg-white/5 px-5 py-3 text-[11px] tracking-wide transition hover:border-white hover:bg-white hover:text-[#252923] md:flex">
               Konsultasi gratis <ArrowUpRight size={14} />
             </a>
-            <a href="#contact" className="rounded-lg p-2 transition hover:bg-white/10 md:hidden" aria-label="Ke kontak"><Menu size={22} /></a>
+            <MobileNav />
           </div>
         </div>
       </header>
@@ -138,20 +140,7 @@ export default function Home() {
             <SectionHeading label="Pilihan karya" title="Inspirasi untuk ruangmu." description="Setiap detail punya tujuan. Lihat beberapa referensi suasana ruang yang bisa menjadi titik awal idemu." />
             <span className="text-[10px] tracking-[.15em] text-[var(--muted)]">SELECTED SPACES · 2026</span>
           </div>
-          <div className="mt-14 grid gap-5 md:grid-cols-2">
-            {projects.map((project, index) => (
-              <article key={project.name} className={index % 2 === 0 ? "group" : "group md:mt-20"}>
-                <div className={`image-cover relative aspect-[1.28] overflow-hidden bg-[#deded3] ${project.className}`}>
-                  <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/10" />
-                  <span className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--paper)] opacity-0 transition group-hover:opacity-100"><ArrowUpRight size={17} /></span>
-                </div>
-                <div className="mt-5 flex items-start justify-between gap-4">
-                  <div><h3 className="font-display text-2xl">{project.name}</h3><p className="mt-1 text-[10px] tracking-[.13em] text-[var(--muted)]">{project.type}</p></div>
-                  <span className="pt-2 text-[10px] text-[var(--muted)]">0{index + 1}</span>
-                </div>
-              </article>
-            ))}
-          </div>
+          <ProductFeatures />
           <p className="mt-12 border-t border-[var(--line)] pt-5 text-xs leading-6 text-[var(--muted)]">Foto di atas merupakan gambar referensi visual. Portofolio proyek aktual Kyna akan ditampilkan setelah dokumentasi proyek ditambahkan.</p>
         </div>
       </section>
@@ -173,14 +162,21 @@ export default function Home() {
             <SectionHeading label="Cerita pelanggan" title="Kepercayaan dibangun dari pengalaman." />
             <div className="flex items-center gap-3"><div className="flex gap-0.5 text-[#9a895d]">{Array.from({length:5}).map((_,i)=><Star key={i} size={15} fill="currentColor" />)}</div><span className="text-xs text-[var(--muted)]">5.0 / 5 · 13 ulasan Google</span></div>
           </div>
-          <div className="mt-14 grid gap-5 lg:grid-cols-3">
+          <Marquee className="mt-14 py-3" duration="38s">
             {testimonials.map((item) => (
-              <article key={item.author} className="flex min-h-[270px] flex-col justify-between border border-[var(--line)] bg-[var(--paper)] p-7 sm:p-8">
-                <div><span className="font-display text-5xl leading-none text-[var(--olive)]">“</span><p className="mt-3 text-sm leading-7 text-[#55594f]">{item.quote}</p></div>
-                <div className="mt-8 border-t border-[var(--line)] pt-5"><p className="text-sm font-semibold">{item.author}</p><p className="mt-1 text-[10px] text-[var(--muted)]">{item.context}</p></div>
+              <article key={item.author} className="flex min-h-[270px] w-[min(82vw,390px)] shrink-0 flex-col justify-between border border-[var(--line)] bg-[var(--paper)] p-7 sm:w-[410px] sm:p-8">
+                <div>
+                  <div className="mb-3 flex gap-0.5 text-[#9a895d]">{Array.from({ length: 5 }).map((_, i) => <Star key={i} size={13} fill="currentColor" />)}</div>
+                  <span className="font-display text-5xl leading-none text-[var(--olive)]">“</span>
+                  <p className="mt-3 text-sm leading-7 text-[#55594f]">{item.quote}</p>
+                </div>
+                <div className="mt-8 border-t border-[var(--line)] pt-5">
+                  <p className="text-sm font-semibold">{item.author}</p>
+                  <p className="mt-1 text-[10px] text-[var(--muted)]">{item.context}</p>
+                </div>
               </article>
             ))}
-          </div>
+          </Marquee>
           <p className="mt-6 text-[10px] text-[var(--muted)]">Ringkasan ulasan pelanggan yang tersedia pada profil Google Kyna Interior & Konstruksi.</p>
         </div>
       </section>
