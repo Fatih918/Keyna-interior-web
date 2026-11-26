@@ -22,7 +22,7 @@ export default function MobileNav() {
         aria-expanded={open}
         aria-controls="mobile-navigation"
         onClick={() => setOpen((value) => !value)}
-        className="relative z-[60] flex h-11 w-11 touch-manipulation items-center justify-center rounded-xl border border-white/15 bg-white/10 text-white transition hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        className="relative flex h-11 w-11 touch-manipulation items-center justify-center rounded-xl border border-white/15 bg-white/10 text-white transition hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
         {open ? <X size={21} /> : <Menu size={21} />}
       </button>
