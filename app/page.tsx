@@ -47,29 +47,27 @@ export default function Home() {
         WUJUDKAN RUANG IMPIANMU — <span className="font-semibold text-[#d9d8c8]">GRATIS SURVEY & KONSULTASI AWAL</span>
       </div>
 
-      <header className="absolute z-20 w-full text-white">
-        <div className="container-wide py-4">
-          <div className="flex h-[72px] items-center justify-between rounded-2xl border border-white/10 bg-[#171914]/90 px-5 shadow-[0_12px_40px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:px-7">
-            <a href="#home" aria-label="Kyna Interior home" className="leading-none">
-              <span className="font-display text-[27px] tracking-[-.06em]">kyna<span className="text-[#c8cdbd]">.</span></span>
-              <span className="mt-1 block text-[8px] tracking-[.24em] text-white/70">INTERIOR & KONSTRUKSI</span>
-            </a>
-            <SiblingFocusNav mode="opacity" aria-label="Navigasi utama" className="hidden text-xs text-white/85 md:flex">
-              <SiblingFocusNavLink className="transition-colors hover:text-white" href="#about">Tentang</SiblingFocusNavLink>
-              <SiblingFocusNavLink className="transition-colors hover:text-white" href="#services">Layanan</SiblingFocusNavLink>
-              <SiblingFocusNavLink className="transition-colors hover:text-white" href="#projects">Portofolio</SiblingFocusNavLink>
-              <SiblingFocusNavLink className="transition-colors hover:text-white" href="#reviews">Testimoni</SiblingFocusNavLink>
-            </SiblingFocusNav>
-            <a href={whatsapp("Halo Kyna Interior, saya ingin konsultasi proyek.")} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-lg border border-white/25 bg-white/5 px-5 py-3 text-[11px] tracking-wide transition hover:border-white hover:bg-white hover:text-[#252923] md:flex">
-              Konsultasi gratis <ArrowUpRight size={14} />
-            </a>
-            <MobileNav />
-          </div>
+      <header className="relative z-30 w-full bg-black text-white">
+        <div className="container-wide flex h-[68px] items-center justify-between">
+          <a href="#home" aria-label="Kyna Interior home" className="leading-none">
+            <span className="font-display text-[27px] tracking-[-.06em]">kyna<span className="text-[#c8cdbd]">.</span></span>
+            <span className="mt-1 block text-[8px] tracking-[.24em] text-white/60">INTERIOR & KONSTRUKSI</span>
+          </a>
+          <SiblingFocusNav mode="opacity" aria-label="Navigasi utama" className="hidden text-xs text-white/80 md:flex">
+            <SiblingFocusNavLink className="transition-colors hover:text-white" href="#about">Tentang</SiblingFocusNavLink>
+            <SiblingFocusNavLink className="transition-colors hover:text-white" href="#services">Layanan</SiblingFocusNavLink>
+            <SiblingFocusNavLink className="transition-colors hover:text-white" href="#projects">Portofolio</SiblingFocusNavLink>
+            <SiblingFocusNavLink className="transition-colors hover:text-white" href="#reviews">Testimoni</SiblingFocusNavLink>
+          </SiblingFocusNav>
+          <a href={whatsapp("Halo Kyna Interior, saya ingin konsultasi proyek.")} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-md bg-white px-4 py-2.5 text-[11px] font-semibold text-black transition hover:bg-[#d9d8c8] md:flex">
+            Konsultasi gratis <ArrowUpRight size={14} />
+          </a>
         </div>
-      </header>
+        <div className="md:hidden"><MobileNav /></div>
+      </header>eader>
 
-      <section id="home" className="hero-image image-cover relative flex min-h-[690px] items-end text-white sm:min-h-[780px]">
-        <div className="container-wide relative z-10 pb-20 pt-40 sm:pb-28">
+      <section id="home" className="hero-image image-cover relative flex min-h-[calc(100svh-150px)] items-end text-white sm:min-h-[780px]">
+        <div className="container-wide relative z-10 pb-16 pt-32 sm:pb-28 sm:pt-40">
           <p className="mb-7 flex items-center gap-3 text-[10px] font-semibold tracking-[.25em] text-white/80"><span className="h-px w-9 bg-[#c8cdbd]" /> INTERIOR DESIGN · BUILD · RENOVATION</p>
           <h1 className="font-display max-w-[850px] text-[clamp(3.5rem,8vw,7.5rem)] leading-[.96] tracking-[-.055em]">Ruang yang<br /><span className="italic text-[#d6d8c9]">bercerita.</span></h1>
           <div className="mt-9 flex max-w-2xl flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
