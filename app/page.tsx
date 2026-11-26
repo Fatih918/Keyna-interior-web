@@ -64,7 +64,7 @@ export default function Home() {
           </a>
         </div>
         <div className="md:hidden"><MobileNav /></div>
-      </header>eader>
+      </header>
 
       <section id="home" className="hero-image image-cover relative flex min-h-[calc(100svh-150px)] items-end text-white sm:min-h-[780px]">
         <div className="container-wide relative z-10 pb-16 pt-32 sm:pb-28 sm:pt-40">
