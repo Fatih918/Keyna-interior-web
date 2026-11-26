@@ -1,17 +1,13 @@
 import {
   ArrowDownRight,
-  ArrowRight,
   ArrowUpRight,
-  Check,
   CheckCircle2,
   Clock3,
-  Instagram,
   MapPin,
   Menu,
   MessageCircle,
   Phone,
   Star,
-  X,
 } from "lucide-react";
 
 const phone = "6285289849344";
