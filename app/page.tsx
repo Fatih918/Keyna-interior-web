@@ -1,3 +1,4 @@
+import SiblingFocusNav from "@/components/animata/container/sibling-focus-nav";
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -55,12 +56,12 @@ export default function Home() {
             <span className="font-display text-[27px] tracking-[-.06em]">kyna<span className="text-[#c8cdbd]">.</span></span>
             <span className="mt-1 block text-[8px] tracking-[.24em] text-white/70">INTERIOR & KONSTRUKSI</span>
           </a>
-          <nav className="hidden items-center gap-9 text-xs text-white/85 md:flex">
-            <a className="transition hover:text-white" href="#about">Tentang</a>
-            <a className="transition hover:text-white" href="#services">Layanan</a>
-            <a className="transition hover:text-white" href="#projects">Portofolio</a>
-            <a className="transition hover:text-white" href="#reviews">Testimoni</a>
-          </nav>
+          <SiblingFocusNav mode="opacity" aria-label="Navigasi utama" className="hidden text-xs text-white/85 md:flex">
+            <SiblingFocusNav.Link className="transition-colors hover:text-white" href="#about">Tentang</SiblingFocusNav.Link>
+            <SiblingFocusNav.Link className="transition-colors hover:text-white" href="#services">Layanan</SiblingFocusNav.Link>
+            <SiblingFocusNav.Link className="transition-colors hover:text-white" href="#projects">Portofolio</SiblingFocusNav.Link>
+            <SiblingFocusNav.Link className="transition-colors hover:text-white" href="#reviews">Testimoni</SiblingFocusNav.Link>
+          </SiblingFocusNav>
           <a href={whatsapp("Halo Kyna Interior, saya ingin konsultasi proyek.")} target="_blank" rel="noreferrer" className="hidden items-center gap-2 border border-white/60 px-5 py-3 text-[11px] tracking-wide transition hover:bg-white hover:text-[#252923] md:flex">
             Konsultasi gratis <ArrowUpRight size={14} />
           </a>
