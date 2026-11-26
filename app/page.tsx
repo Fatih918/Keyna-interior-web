@@ -66,10 +66,10 @@ export default function Home() {
         <div className="md:hidden"><MobileNav /></div>
       </header>
 
-      <section id="home" className="hero-image image-cover relative flex min-h-[calc(100svh-150px)] items-end text-white sm:min-h-[780px]">
+      <section id="home" className="hero-image image-cover relative flex items-end text-white">
         <div className="container-wide relative z-10 pb-16 pt-32 sm:pb-28 sm:pt-40">
           <p className="mb-7 flex items-center gap-3 text-[10px] font-semibold tracking-[.25em] text-white/80"><span className="h-px w-9 bg-[#c8cdbd]" /> INTERIOR DESIGN · BUILD · RENOVATION</p>
-          <h1 className="font-display max-w-[850px] text-[clamp(3.5rem,8vw,7.5rem)] leading-[.96] tracking-[-.055em]">Ruang yang<br /><span className="italic text-[#d6d8c9]">bercerita.</span></h1>
+          <h1 className="font-display max-w-[850px] text-[clamp(3rem,12vw,5.5rem)] leading-[.96] tracking-[-.055em] sm:text-[clamp(3.5rem,8vw,7.5rem)]">Ruang yang<br /><span className="italic text-[#d6d8c9]">bercerita.</span></h1>
           <div className="mt-9 flex max-w-2xl flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
             <p className="max-w-[390px] text-sm leading-7 text-white/75">Kami merancang, membangun, dan memperbarui ruang agar terasa lebih nyaman, fungsional, dan dekat dengan cara hidupmu.</p>
             <a href="#contact" className="group flex w-fit items-center gap-5 border-b border-white/60 pb-3 text-xs tracking-wide">Mulai konsultasi <span className="transition group-hover:translate-x-1"><ArrowUpRight size={16} /></span></a>
