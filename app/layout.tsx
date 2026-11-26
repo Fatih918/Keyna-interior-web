@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import "./globals.css";\nimport VerticalTilesPreloader from "@/components/animata/preloader/vertical-tiles";
 
 const dmSans = DM_Sans({
   variable: "--font-sans",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id">
-      <body className={`${dmSans.variable} ${playfair.variable}`}>{children}</body>
+      <body className={`${dmSans.variable} ${playfair.variable}`}><VerticalTilesPreloader />{children}</body>
     </html>
   );
 }
