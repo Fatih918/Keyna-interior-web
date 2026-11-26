@@ -74,7 +74,7 @@ type LinkProps = ComponentProps<"a"> & {
   mode?: SiblingFocusNavMode;
 };
 
-function SiblingFocusNavLink({ mode, className, ...props }: LinkProps) {
+export function SiblingFocusNavLink({ mode, className, ...props }: LinkProps) {
   const contextMode = use(SiblingFocusNavModeContext);
   const resolvedMode = mode ?? contextMode;
 
@@ -88,8 +88,7 @@ function SiblingFocusNavLink({ mode, className, ...props }: LinkProps) {
   );
 }
 
-const SiblingFocusNav = Object.assign(SiblingFocusNavRoot, {
-  Link: SiblingFocusNavLink,
+export const SiblingFocusNav = Object.assign(SiblingFocusNavRoot, {
   linkClassName: siblingFocusNavLinkClassName("opacity"),
   groupClassName: opacityGroupClassName,
   getLinkClassName: siblingFocusNavLinkClassName,
