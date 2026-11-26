@@ -1,3 +1,5 @@
+"use client";
+
 import { type ComponentProps, createContext, use } from "react";
 
 export type SiblingFocusNavMode = "opacity" | "blur";
