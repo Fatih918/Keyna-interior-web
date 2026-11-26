@@ -40,3 +40,33 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .section-pad { padding-block: 76px; }
   .hero-image { background-position: 58% center; }
 }
+
+
+@keyframes kyna-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - 1.25rem)); }
+}
+
+.kyna-marquee-track {
+  animation: kyna-marquee-scroll var(--marquee-duration, 36s) linear infinite;
+}
+
+.kyna-marquee:hover .kyna-marquee-track,
+.kyna-marquee:focus-within .kyna-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kyna-marquee-track {
+    animation: none;
+  }
+
+  .kyna-marquee {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .kyna-marquee-track > * {
+    scroll-snap-align: start;
+  }
+}
