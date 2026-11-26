@@ -59,7 +59,7 @@ export default function Home() {
             <SiblingFocusNavLink className="transition-colors hover:text-white" href="#projects">Portofolio</SiblingFocusNavLink>
             <SiblingFocusNavLink className="transition-colors hover:text-white" href="#reviews">Testimoni</SiblingFocusNavLink>
           </SiblingFocusNav>
-          <a href={whatsapp("Halo Kyna Interior, saya ingin konsultasi proyek.")} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-md bg-white px-4 py-2.5 text-[11px] font-semibold text-black transition hover:bg-[#d9d8c8] md:flex">
+          <a href={whatsapp("Halo Kyna Interior, saya ingin konsultasi proyek.")} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-md bg-[#30382e] px-4 py-2.5 text-[11px] font-semibold text-white transition hover:bg-[#46513f] md:flex">
             Konsultasi gratis <ArrowUpRight size={14} />
           </a>
         </div>
