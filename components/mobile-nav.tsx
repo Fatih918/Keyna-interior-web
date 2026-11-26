@@ -18,7 +18,7 @@ export default function MobileNav() {
           {link.label}
         </a>
       ))}
-      <a href="https://wa.me/6285289849344?text=Halo%20Kyna%20Interior%2C%20saya%20ingin%20konsultasi%20proyek." target="_blank" rel="noreferrer" className="ml-auto flex min-h-10 shrink-0 touch-manipulation items-center gap-1.5 rounded-md bg-white px-3 text-[10px] font-semibold text-black">
+      <a href="https://wa.me/6285289849344?text=Halo%20Kyna%20Interior%2C%20saya%20ingin%20konsultasi%20proyek." target="_blank" rel="noreferrer" className="ml-auto flex min-h-10 shrink-0 touch-manipulation items-center gap-1.5 rounded-md bg-[#30382e] px-3 text-[10px] font-semibold text-white transition-colors hover:bg-[#46513f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
         Konsultasi <ArrowUpRight size={13} />
       </a>
     </nav>
